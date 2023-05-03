@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"fmt"
 	"go/ast"
-	"reflect"
 
 	"github.com/chrisseto/gatch/pkg/gopatch"
 	"golang.org/x/tools/go/analysis"
@@ -19,13 +18,10 @@ var Analyzer = &analysis.Analyzer{
 	Requires: []*analysis.Analyzer{
 		inspect.Analyzer,
 	},
-	ResultType: reflect.TypeOf(new(Matcher)),
 	Run: func(p *analysis.Pass) (any, error) {
 		inspect := p.ResultOf[inspect.Analyzer].(*inspector.Inspector)
 
 		patch, err := gopatch.Parse(bytes.NewBuffer([]byte(`
-@@
-@@
 -import "errors"
 
 -errors.New(fmt.Sprintf(...))
@@ -50,10 +46,5 @@ var Analyzer = &analysis.Analyzer{
 		})
 
 		return nil, nil
-
-		// return &Matcher{
-		// 	inspector: p.ResultOf[inspect.Analyzer].(*inspector.Inspector),
-		// 	types:     p.TypesInfo,
-		// }, nil
 	},
 }

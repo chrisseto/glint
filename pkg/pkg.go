@@ -1,12 +1,10 @@
 package pkg
 
 import (
-	"fmt"
+	// "fmt"
 
 	"github.com/chrisseto/gatch/pkg/matcher"
 	"golang.org/x/tools/go/analysis"
-	// "golang.org/x/tools/go/analysis/passes/printf"
-	// "golang.org/x/tools/go/ast/astutil"
 )
 
 var Analyzer = &analysis.Analyzer{
@@ -17,7 +15,7 @@ var Analyzer = &analysis.Analyzer{
 		matcher.Analyzer,
 	},
 	Run: func(p *analysis.Pass) (any, error) {
-		m := p.ResultOf[matcher.Analyzer].(*matcher.Matcher)
+		// m := p.ResultOf[matcher.Analyzer].(*matcher.Matcher)
 
 		// pattern := &matcher.CallPattern{
 		// 	Func: &matcher.NamedPattern{
@@ -27,7 +25,7 @@ var Analyzer = &analysis.Analyzer{
 		// 	// Arguments: ,
 		// }
 
-		fmt.Printf("Found: %+v", m.Find())
+		// fmt.Printf("Found: %+v", m.Find())
 
 		return nil, nil
 	},

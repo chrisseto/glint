@@ -5,7 +5,6 @@ import (
 
 	"github.com/chrisseto/gatch/pkg"
 	"golang.org/x/tools/go/analysis/analysistest"
-	// "golang.org/x/tools/go/analysis/passes/printf"
 )
 
 func Test(t *testing.T) {

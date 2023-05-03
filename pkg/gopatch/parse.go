@@ -18,7 +18,7 @@ type GoPatch struct {
 }
 
 type Patch struct {
-	MetaVariables []MetaVariable `"@" "@" ("var" @@)* "@" "@"`
+	MetaVariables []MetaVariable `("@" "@" ("var" @@)* "@" "@")?`
 	Diff          Diff           `@@`
 }
 

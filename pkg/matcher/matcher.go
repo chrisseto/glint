@@ -1,17 +1,11 @@
 package matcher
 
 import (
-	// "fmt"
-	// "bytes"
 	"fmt"
 	"go/ast"
 	"go/types"
 
-	// "reflect"
-
-	// "github.com/chrisseto/gatch/pkg/gopatch"
 	"golang.org/x/tools/go/ast/inspector"
-	// "honnef.co/go/tools/analysis/code"
 	"honnef.co/go/tools/pattern"
 )
 

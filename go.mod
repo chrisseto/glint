@@ -1,4 +1,4 @@
-module github.com/chrisseto/gatch
+module github.com/chrisseto/glint
 
 go 1.19
 
@@ -17,3 +17,5 @@ require (
 	golang.org/x/sys v0.7.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace honnef.co/go/tools => github.com/chrisseto/go-tools v0.0.0-20230503130548-a1991d671d11

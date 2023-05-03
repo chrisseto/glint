@@ -3,7 +3,7 @@ package pkg_test
 import (
 	"testing"
 
-	"github.com/chrisseto/gatch/pkg"
+	"github.com/chrisseto/glint/pkg"
 	"golang.org/x/tools/go/analysis/analysistest"
 )
 

@@ -4,7 +4,6 @@ import (
 	"go/ast"
 	"go/types"
 
-	// "golang.org/x/tools/go/types/typeutil"
 	"honnef.co/go/tools/pattern"
 )
 

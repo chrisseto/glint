@@ -1,22 +1,18 @@
 package gopatch_test
 
 import (
-	// "go/ast"
 	"go/ast"
 	"go/parser"
 	"go/token"
-
-	// "go/token"
 	"os"
 	"testing"
 
-	"github.com/chrisseto/gatch/pkg/gopatch"
+	"github.com/chrisseto/glint/pkg/gopatch"
 	"github.com/stretchr/testify/require"
 	"golang.org/x/tools/go/ast/astutil"
 	"honnef.co/go/tools/analysis/code"
 	"honnef.co/go/tools/pattern"
 )
-
 
 func TestParse(t *testing.T) {
 	f, err := os.Open("testdata/s1028.patch")

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"go/ast"
 
-	"github.com/chrisseto/gatch/pkg/gopatch"
+	"github.com/chrisseto/glint/pkg/gopatch"
 	"golang.org/x/tools/go/analysis"
 	"golang.org/x/tools/go/analysis/passes/inspect"
 	"golang.org/x/tools/go/ast/inspector"

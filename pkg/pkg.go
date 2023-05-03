@@ -1,9 +1,7 @@
 package pkg
 
 import (
-	// "fmt"
-
-	"github.com/chrisseto/gatch/pkg/matcher"
+	"github.com/chrisseto/glint/pkg/matcher"
 	"golang.org/x/tools/go/analysis"
 )
 
